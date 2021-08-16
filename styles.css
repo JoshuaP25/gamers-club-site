@@ -1,0 +1,336 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    background-color: whitesmoke;
+}
+
+/* Nav */
+
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #0B0C10;
+    color: whitesmoke;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Odibee Sans', cursive;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-left: 30px;
+}
+
+span {
+    color: #66FCF1;
+    text-transform: uppercase;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    color: #66FCF1;
+}
+
+.links a {
+    margin-right: 20px;
+    text-transform: uppercase;
+    color: #66FCF1;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.links a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #66FCF1;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.links a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.links .button {
+    border: 2px solid #66FCF1;
+    color: whitesmoke;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.links .button:hover {
+    background-color: #66FCF1;
+    color: #0B0C10;
+}
+
+.menu div {
+    display: none;
+    width: 35px;
+    height: 5px;
+    background-color:#66FCF1;
+    margin: 6px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    nav {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .links a {
+        display: none;
+    }
+    .menu div {
+        display: block;
+        margin-right: 20px;
+    }
+}
+
+/* Header */
+
+header {
+    background-image: url("./images/florian-olivo-Mf23RF8xArY-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.text-logo {
+    font-family: 'Odibee Sans', cursive;
+}
+
+.light {
+    font-family: 'Odibee Sans', cursive;
+    color: whitesmoke;
+}
+
+.intro {
+    padding: 30px 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.intro p {
+    font-size: 1.5rem;
+}
+
+/* Mobile */
+
+#mobile-games, #pc-games {
+    max-width: 1000px;
+    margin: 100px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.mobile, .pc {
+    width: 300px;
+    min-height: 400px;
+    display: flex;
+    align-items: flex-end;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.description {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+h3 {
+    font-size: 1.125rem;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.description a {
+    border: 2px solid #00ffff;
+    background-color: #66FCF1;
+    color: #0B0C10;
+    padding: 5px 15px;
+    /* width: 100%; */
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+#ml {
+    background-image: url("./images/mobile-legends-chou-iori-yagami-hd-wallpaper-preview.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+#wildrift {
+    background-image: url("./images/League-of-Legends-Wild-Rift.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+#pubg-mobile {
+    background-image: url("./images/capture_20190817151607.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+#fortnite {
+    background-image: url("./images/Season-5-skins.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+#lol {
+    background-image: url("./images/eywBDj.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+#valorant {
+    background-image: url("./images/valorant.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+}
+
+/* Tournament */
+
+#tournament {
+    padding-bottom: 80px;
+}
+
+#tournament h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.game {
+    background-color: #040818;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 400px;
+}
+
+.game-image {
+    width: 200px;
+    height: auto; 
+    padding: 20px;
+    flex-grow: 2;
+}
+
+.desc {
+    width: 300px;
+    color: whitesmoke;
+    margin-left: 30px;
+    padding: 20px;
+    flex-grow: 1;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    
+}
+
+.desc .title {
+    font-size: 1.75rem;
+    color: #66FCF1;
+}
+
+.desc p:nth-last-child(2) {
+    margin: 20px 0;
+}
+
+.game a {
+    border: 2px solid #66FCF1;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.desc a:hover {
+    background-color: #66FCF1;
+    color: #0B0C10;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 480px) {
+    .game {
+        text-align: center;
+    }
+
+    .desc {
+        padding-top: 0;
+    }
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+}
