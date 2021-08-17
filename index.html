@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="script.js" async></script>
     <title>The Gamers Club</title>
 </head>
 <body>
@@ -85,8 +86,34 @@
                 <h3 class="title">Mobile Legends</h3>
                 <h4 class="type">5v5 Tournament</h4>
                 <p>Grand Prize: $</p>
-                <p><strong>Criteria:</strong> Each team should have 5 members to be able to qualify.</p>
-                <a>Click here to register</a>
+                <p class="criteria"><strong>Criteria:</strong> Each team should have 5 members to be able to qualify.</p>
+                <a id="register">Click here to register</a>
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="closeBtn">&times;</span>
+                            <h2>Mobile Legends</h2>
+                            <h3>5v5 Tournament</h3>
+                        </div>
+                        <div class="modal-body">
+                            <form action="" method="POST">
+                                <label for="team-name">Team Name</label>
+                                <input type="text" id="team-name" name="team-name" minlength="3" required>
+
+                                <label for="team-leader">Team Leader</label>
+                                <input type="text" id="team-leader" name="team-leader" required>
+
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+
+                                <label for="leader-contact">Contact Number</label>
+                                <input type="tel" id="leader-contact" name="leader-contact" pattern="/" required>
+
+                                <input type="submit" id="reg_btn" value="Register"></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

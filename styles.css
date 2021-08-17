@@ -154,6 +154,23 @@ h1 {
     font-size: 1.5rem;
 }
 
+@media only screen and (max-width: 480px) {
+    header {
+        min-height: 400px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+
+    .intro p {
+        font-size: 1rem;
+        margin-top: 10px;
+        line-height: 1.3;
+    }
+}
+
 /* Mobile */
 
 #mobile-games, #pc-games {
@@ -201,15 +218,19 @@ h3 {
 }
 
 .description a {
-    border: 2px solid #00ffff;
-    background-color: #66FCF1;
-    color: #0B0C10;
+    border: 2px solid #66FCF1;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
     padding: 5px 15px;
-    /* width: 100%; */
     text-align: center;
     margin: 0 auto;
     font-size: 1rem;
     font-weight: 700;
+}
+
+.description a:hover {
+    background-color: #66FCF1;
+    color: #0B0C10;
 }
 
 #ml {
@@ -269,6 +290,7 @@ h3 {
 #tournament h2 {
     text-align: center;
     margin-bottom: 20px;
+    line-height: 1.3;
 }
 
 .game {
@@ -307,6 +329,10 @@ h3 {
     margin: 20px 0;
 }
 
+.desc .criteria {
+    margin-bottom: 20px;
+}
+
 .game a {
     border: 2px solid #66FCF1;
     padding: 5px 10px;
@@ -319,6 +345,110 @@ h3 {
     font-weight: 600;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* overflow: auto; */
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    color: #0B0C10;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+  
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.modal-header {
+    display: block;
+    text-align: center;
+    background-color: #66FCF1;
+    color: #0B0C10;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.modal-header h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 0;
+    margin-bottom: 10px;
+}
+
+.modal-body {
+    padding: 15px 0;
+}
+
+.modal-body form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+}
+
+.modal-body label {
+    font-size: 0.9rem;
+    font-weight: 300;
+    
+}
+
+.modal-body input {
+    margin-bottom: 10px;
+    padding: 7px 5px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.closeBtn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 760px) {
+    .modal-content {
+        width: 80%;
+        margin: 15% auto;
+    }
+}
+
 @media only screen and (max-width: 480px) {
     .game {
         text-align: center;
@@ -327,6 +457,11 @@ h3 {
     .desc {
         padding-top: 0;
     }
+
+    .modal-content {
+        width: 80%;
+        margin: 30% auto;
+    }
 }
 
 /* Footer */
@@ -334,3 +469,5 @@ h3 {
 footer {
     text-align: center;
 }
+
+
